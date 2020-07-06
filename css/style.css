@@ -68,9 +68,15 @@ a{
   width: 40%;
   font-size: 20px;
 }
+
+.parent-dropdown{
+  position: relative;
+}
+
 /* dropdown box */
 .dropdown{
   display: none;
+  position: absolute;
 }
 
 .drop-active{
