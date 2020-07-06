@@ -1,4 +1,4 @@
-/* regole generali */
+/* REGOLE GENERALI */
 
 *{
   box-sizing: border-box;
@@ -62,13 +62,22 @@ a{
   width: 13%;
 }
 
-.nav-fixed ul{
+.nav-fixed > ul{
   display: flex;
   justify-content: space-around;
   width: 40%;
   font-size: 20px;
 }
+/* dropdown box */
+.dropdown{
+  display: none;
+}
 
+.drop-active{
+  display: block;
+}
+
+/* pulsante "scarica l'app" */
 .nav-fixed .download{
   display: flex;
   justify-content: flex-end;
