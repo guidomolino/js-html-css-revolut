@@ -16,11 +16,11 @@ a{
   text-decoration: none;
 }
 
-/* navbar principale */
-
 .container{
   padding: 20px 10%;
 }
+/* navbar principale */
+
 
 .nav-main{
   background-color: #F3F4F5FF;
@@ -30,13 +30,13 @@ a{
   color: #9A9C9DFF;
 }
 
-.nav-main .left{
+.nav-main .nav-left{
   display: flex;
   justify-content: space-between;
   width: 15%;
 }
 
-.nav-main .right{
+.nav-main .nav-right{
   display: flex;
   justify-content: space-between;
   width: 15%;
@@ -50,37 +50,56 @@ a{
 /* navbar fissa */
 
 .nav-fixed{
-  color: #9A9C9DFF;
   display: flex;
   align-items: center;
   padding-top: 50px;
+  color: #9A9C9DFF;
 }
 
 .nav-fixed h2{
-  color: black;
-  font-size: 35px;
   width: 13%;
+
+  font-size: 35px;
+  color: black;
 }
 
 .nav-fixed > ul{
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 50%;
+
   font-size: 20px;
 }
 
 .parent-dropdown{
   position: relative;
+  cursor: pointer;
 }
 
 /* dropdown box */
 .dropdown{
   display: none;
   position: absolute;
+  top: 40px;
+  left: -20px;
+  z-index: 999;
+  padding: 10px 20px 20px 20px;
+
+  box-shadow: 0px 10px 13px 2px rgba(0,0,0,0.32);
+  background-color: white;
+  color: #9A9C9DFF;
+  font-weight: normal;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.dropdown li{
+  margin-top: 10px;
 }
 
 .drop-active{
-  display: block;
+  display: block !important;
 }
 
 /* pulsante "scarica l'app" */
@@ -92,8 +111,220 @@ a{
 
 #download-btn{
   padding: 20px;
-  background-color: black;
   border-radius: 15px;
   font-size: 18px;
+  background-color: black;
   color: white;
+
+  transition: all 0.5s;
+}
+
+#download-btn:hover{
+  padding: 20px 30px;
+}
+
+/* hamburger menu smartphone */
+.nav-fixed i{
+  display: none;
+  font-size: 20px;
+}
+
+.hamburger-dropdown{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  width: 100vh;
+  height: 100vh;
+}
+
+.drop-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 68%;
+
+  padding: 20px;
+  background-color: #F3F4F5FF;
+}
+
+.drop-nav ul{
+  display: flex;
+}
+
+.drop-nav ul li{
+  margin-right: 20px;
+}
+
+#drp-droplist{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75vh;
+  overflow: scroll;
+}
+
+
+/* main */
+
+main{
+  display: flex;
+  position: relative;
+  z-index: 3;
+  padding: 20px 0;
+}
+
+/* sinistra */
+
+.main-left{
+  width: 37%;
+  position: relative;
+  z-index: 3;
+}
+
+.main-left h1{
+  margin-top: 60px;
+  font-size: 80px;
+}
+
+.main-left p{
+  color: grey;
+  margin: 40px 0;
+  font-size: 18px;
+}
+/* form */
+.form{
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form #inizia-btn{
+  padding: 15px 50px;
+  background-color: #47494CFF;
+  color: #919294FF;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.form input{
+  border: none;
+  border-bottom: solid 1px gray;
+  font-size: 20px;
+  height: 30px;
+}
+
+.form #contry-num{
+  width: 60px;
+  font-weight: bold;
+}
+
+.note{
+  margin-top: 50px;
+}
+
+/* destra */
+
+.main-right{
+  width: 50%;
+  text-align: right;
+  position: relative;
+  z-index: 3;
+}
+
+.main-right img{
+  position: relative;
+  width: 80%;
+  height: auto;
+}
+
+.main-right i{
+  position: absolute;
+  font-size: 100px;
+  cursor: pointer;
+  transform: translate(-360%, 300%);
+  background-color: white;
+}
+
+/* footer */
+
+footer .download-footer{
+  display: none;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid grey;
+  background-color: white;
+}
+
+footer .spam{
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  z-index: 4;
+  width: 100%;
+
+  padding: 40px;
+  text-align: center;
+  background-color: white;
+
+}
+
+/* versione smartphone */
+
+@media all and (max-width:720px){
+
+  .container{
+    padding: 20px 20%;
+  }
+
+  .nav-main, #droplist, .download, .form, .note{
+    display: none !important;
+  }
+
+  .download-footer, .nav-fixed i, .spam{
+    display: inline-block !important;
+  }
+
+  .nav-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 999;
+  }
+
+  main{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-left, .main-right{
+    width: 100%;
+  }
+
+  .main-left h1{
+    font-size: 40px;
+    margin-top: 100px;
+  }
+  .main-right{
+    margin-bottom: 80px;
+  }
+
+  .main-right i{
+    display: none;
+  }
+
+
 }

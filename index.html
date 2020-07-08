@@ -10,25 +10,25 @@
     <!-- jq -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/f1dc89ddf1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav class="nav-main container">
-        <ul class="left">
-          <li class="text-active"><a href="#">Personale</a></li>
+        <ul class="nav-left">
+          <li id="fisso" class="text-active"><a href="#">Personale</a></li>
           <li><a href="#">Business</a></li>
         </ul>
-        <ul class="right">
+        <ul class="nav-right">
           <li><a href="#">Azienda</a></li>
           <li><a href="#">Aiuto</a></li>
         </ul>
       </nav>
       <nav class="nav-fixed container">
         <h2>Revolut</h2>
-        <ul>
+        <ul id="droplist">
           <li class="parent-dropdown">
             Denaro
             <div class="dropdown">
@@ -36,7 +36,7 @@
                 <li><a href="#">Invia denaro all'estero</a></li>
                 <li><a href="#">Effettua e ricevi pagamenti</a></li>
                 <li><a href="#">Paga con Apple Pay</a></li>
-                <li><a href="#">Paga con Gpay</a></li>
+                <li><a href="#">Paga con GPay</a></li>
               </ul>
             </div>
           </li>
@@ -88,14 +88,102 @@
         <div class="download">
           <a id="download-btn" href="#">Scarica l'app</a>
         </div>
+        <i class="fas fa-bars"></i>
+        <div class="hamburger-dropdown">
+          <nav class="drop-nav">
+            <ul>
+              <li>Personale</li>
+              <li>Business</li>
+            </ul>
+            <i class="fas fa-times"></i>
+          </nav>
+          <ul id="drp-droplist">
+            <li class="parent-dropdown">
+              Denaro
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Invia denaro all'estero</a></li>
+                  <li><a href="#">Effettua e ricevi pagamenti</a></li>
+                  <li><a href="#">Paga con Apple Pay</a></li>
+                  <li><a href="#">Paga con GPay</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="parent-dropdown">
+              Investimenti e Risparmi
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Effettua compravendite di titoli internazionali</a></li>
+                  <li><a href="#">Effettua compravendite di prodotti</a> </li>
+                  <li><a href="#">Effettua compravendite di Crypto</a> </li>
+                  <li><a href="#">Imposta i Salvadanai</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="parent-dropdown">
+              Controllo
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Imposta i budget</a></li>
+                  <li><a href="#">Tutelati</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="parent-dropdown">
+              Altro
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Assicura te stesso all'estero</a></li>
+                  <li><a href="#">Assicura il tuo dispositivo</a></li>
+                  <li><a href="#">Dona agli enti di beneficenza</a></li>
+                  <li>PROSSIMAMENTE</li>
+                  <li>Scopri i premi</li>
+                </ul>
+              </div>
+            </li>
+            <li class="parent-dropdown">
+              Plans
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Standard</a></li>
+                  <li><a href="#">Premium</a></li>
+                  <li><a href="#">Metal</a></li>
+                  <li><a href="#">Junior</a></li>
+                  <li><a href="#">Tariffazione</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="container">
-
+      <div class="main-left">
+        <h1>Ottieni di più dai tuoi fondi</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="form">
+          <input id="contry-num" type="number" name="" value="" placeholder="+39">
+          <input id="num" type="number" name="" value="" placeholder="Numero di telefono">
+          <span id="inizia-btn">Inizia</span>
+        </div>
+        <div class="note">
+          <i class="fas fa-clock"></i>
+          <span>Apri un conto in pochi minuti</span>
+        </div>
+      </div>
+      <div class="main-right">
+        <img src="img/phone.png" alt="">
+        <i class="far fa-play-circle"></i>
+      </div>
     </main>
-    <footer class="container">
-
+    <footer>
+      <div class="spam">
+        <h2>Tutta la tua vita finanziaria a portata di dito</h2>
+      </div>
+      <div class="download-footer">
+        <a id="download-btn" href="#">Scarica l'app</a>
+      </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
